@@ -1,38 +1,108 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  height: 100vh;
+  width: 100%;
+  background-color: #00a8e8;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.title {
+  font-size: 50px;
+  color: #e64100;
+  transition: all 2s;
+  position: relative;
+  top: 100vh;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+.title_logo {
+  display: flex;
+}
+
+.title_animation .title {
+  animation: titleAnimation 2.5s forwards 0.2s;
+}
+
+.title_animation .logo {
+  animation: logoAnimation 2.5s forwards 0.2s;
+}
+
+@keyframes titleAnimation {
+  0% {
+    top: 80vh;
+    opacity: 0;
+  }
+  70% {
+    top: -40px;
+    transform: skew(0, 0);
+  }
+  100% {
+    transform: skew(0, -10deg);
+    top: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes logoAnimation {
+  0% {
+    top: -100px;
+  }
+  70% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+    left: -15px;
+  }
+}
+
+.victory {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 70%;
+  height: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  font-size: 40px;
+  top: -100px;
+  animation: vittoria 2s forwards;
+  background-image: url('fireworks.gif');
+  background-repeat: round;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes vittoria {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loser {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  font-size: 40px;
+  top: -100px;
+  animation: vittoria 2s forwards;
+  align-items: center;
+}
+
+.loser img {
+  position: relative;
 }

@@ -1,0 +1,9 @@
+.div_life {
+  display: flex;
+  flex-direction: row;
+  transition: all 1s;
+}
+
+.div_life_anim {
+  transform: scale(1.4);
+}

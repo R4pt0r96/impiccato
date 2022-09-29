@@ -1,0 +1,21 @@
+.opacityAnimation {
+  animation: opacAnim 3s forwards;
+  display: flex;
+  height: 100%;
+  width: auto;
+  align-items: center;
+  position: relative;
+  top: -50px;
+}
+
+@keyframes opacAnim {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
